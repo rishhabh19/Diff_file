@@ -1,0 +1,7 @@
+--- /home/rishabh/linux-linux-3.16.y/arch/x86/syscalls/syscall_32.tbl	2019-09-24 01:42:19.000000000 +0530
++++ /home/rishabh/working_dirct/arch/x86/syscalls/syscall_32.tbl	2019-09-29 15:08:07.607917035 +0530
+@@ -361,3 +361,4 @@
+ 352	i386	sched_getattr		sys_sched_getattr
+ 353	i386	renameat2		sys_renameat2
+ 354	i386	seccomp			sys_seccomp
++355	i386    sh_task_info		sys_sh_task_info

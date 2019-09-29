@@ -1,0 +1,11 @@
+--- /home/rishabh/linux-linux-3.16.y/Makefile	2019-09-24 01:42:19.000000000 +0530
++++ /home/rishabh/working_dirct/Makefile	2019-09-28 00:49:02.077071224 +0530
+@@ -852,7 +852,7 @@
+ 
+ 
+ ifeq ($(KBUILD_EXTMOD),)
+-core-y		+= kernel/ mm/ fs/ ipc/ security/ crypto/ block/
++core-y		+= kernel/ mm/ fs/ ipc/ security/ crypto/ block/ info/
+ 
+ vmlinux-dirs	:= $(patsubst %/,%,$(filter %/, $(init-y) $(init-m) \
+ 		     $(core-y) $(core-m) $(drivers-y) $(drivers-m) \

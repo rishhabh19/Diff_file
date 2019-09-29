@@ -1,0 +1,44 @@
+--- /home/rishabh/linux-linux-3.16.y/info/taskinfo.c	1970-01-01 05:30:00.000000000 +0530
++++ /home/rishabh/working_dirct/info/taskinfo.c	2019-09-29 20:34:32.872850934 +0530
+@@ -0,0 +1,41 @@
++#include <stdio.h>
++
++#include <linux/kernel.h>
++
++#include <sys/syscall.h>
++
++#include <errno.h>
++
++#include <unistd.h>
++
++int main(int argc, char** argv)
++
++{  
++
++	printf("-------Invoking Test For 'sh_task_info' System Call-------\n");
++
++	int pid=atoi(argv[1]);
++
++	long int status = syscall(355, pid, argv[2]); 
++	printf("Running task_info");
++	if(status == 0) 
++
++		printf("System Call 'sh_task_info' executed correctly.\nUse dmesg to check processInfo\n");
++
++
++
++	else 
++
++	{
++
++		printf("System call sh_task_info did not execute as expected\n");
++
++		perror("Error ");
++
++		printf("Error No.: %d\n", errno);
++
++	}
++
++	return 0;
++
++}
